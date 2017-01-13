@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATSAM3X8E</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>SAM3X8E_OfficialDevelopment</AssemblyName>
+    <Name>SAM3X8E_OfficialDevelopment</Name>
+    <RootNamespace>SAM3X8E_OfficialDevelopment</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations>
+          <configuration key="config.compiler.armgcc.printf" value="iprintf" default="iprintf" content-id="Atmel.ASF" />
+          <configuration key="config.compiler.armgcc.scanf" value="iscanf" default="iscanf" content-id="Atmel.ASF" />
+        </configurations>
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.30.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>custom</avrtool>
+    <avrtoolserialnumber />
+    <avrdeviceexpectedsignature>0x285E0A60</avrdeviceexpectedsignature>
+    <custom>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">custom</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Custom Programming Tool</ToolName>
+    </custom>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAM3X_DFP\1.0.41\include</Value>
+            <Value>../src/Config</Value>
+          </ListValues>
+        </armgcc.compiler.directories.IncludePaths>
+        <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+            <Value>printf=iprintf</Value>
+            <Value>scanf=iscanf</Value>
+            <Value>ARM_MATH_CM3=true</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAM3X_DFP\1.0.41\include</Value>
+            <Value>../src/ASF/sam/drivers/pmc</Value>
+            <Value>../src/Config</Value>
+            <Value>../src/ASF/common/services/clock</Value>
+            <Value>../src/ASF/common/services/twi</Value>
+            <Value>../src/ASF/common/utils</Value>
+            <Value>../src/ASF/sam/drivers/twi</Value>
+            <Value>../src/ASF/sam/utils</Value>
+            <Value>../src/ASF/sam/utils/header_files</Value>
+            <Value>../src/ASF/sam/utils/cmsis/sam3x/source/templates</Value>
+            <Value>../src/ASF/sam/utils/cmsis/sam3x/include</Value>
+            <Value>../src/ASF/sam/utils/preprocessor</Value>
+            <Value>../src/ASF/thirdparty/CMSIS/Include</Value>
+            <Value>../src/ASF/thirdparty/CMSIS/Lib/GCC</Value>
+          </ListValues>
+        </armgcccpp.compiler.directories.IncludePaths>
+        <armgcccpp.compiler.optimization.level>Optimize most (-O3)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.miscellaneous.OtherFlags>-std=gnu++11</armgcccpp.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>%24(ProjectDir)\Device_Startup</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.LibrarySearchPaths>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.linker.memorysettings.ExternalRAM>False</armgcccpp.linker.memorysettings.ExternalRAM>
+        <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsam3x8e_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+        <armgcccpp.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAM3X_DFP\1.0.41\include</Value>
+            <Value>../src/Config</Value>
+          </ListValues>
+        </armgcccpp.assembler.general.IncludePaths>
+        <armgcccpp.preprocessingassembler.general.AssemblerFlags>-Dprintf=iprintf</armgcccpp.preprocessingassembler.general.AssemblerFlags>
+        <armgcccpp.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAM3X_DFP\1.0.41\include</Value>
+            <Value>../src/Config</Value>
+          </ListValues>
+        </armgcccpp.preprocessingassembler.general.IncludePaths>
+      </ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAM3X_DFP\1.0.41\include</Value>
+            <Value>../src/Config</Value>
+          </ListValues>
+        </armgcc.compiler.directories.IncludePaths>
+        <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</armgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <armgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</armgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>printf=iprintf</Value>
+            <Value>scanf=iscanf</Value>
+            <Value>ARM_MATH_CM3=true</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAM3X_DFP\1.0.41\include</Value>
+            <Value>../include</Value>
+            <Value>../Peripherals</Value>
+            <Value>../source</Value>
+            <Value>../src/ASF/sam/drivers/pmc</Value>
+            <Value>../src/Config</Value>
+            <Value>../src/ASF/common/services/clock</Value>
+            <Value>../src/ASF/common/services/twi</Value>
+            <Value>../src/ASF/common/utils</Value>
+            <Value>../src/ASF/sam/drivers/twi</Value>
+            <Value>../src/ASF/sam/utils</Value>
+            <Value>../src/ASF/sam/utils/header_files</Value>
+            <Value>../src/ASF/sam/utils/cmsis/sam3x/source/templates</Value>
+            <Value>../src/ASF/sam/utils/cmsis/sam3x/include</Value>
+            <Value>../src/ASF/sam/utils/preprocessor</Value>
+            <Value>../src/ASF/thirdparty/CMSIS/Include</Value>
+            <Value>../src/ASF/thirdparty/CMSIS/Lib/GCC</Value>
+          </ListValues>
+        </armgcccpp.compiler.directories.IncludePaths>
+        <armgcccpp.compiler.optimization.level>Optimize most (-O3)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcccpp.compiler.optimization.DebugLevel>Default (-g2)</armgcccpp.compiler.optimization.DebugLevel>
+        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.miscellaneous.OtherFlags>-std=gnu++11</armgcccpp.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>%24(ProjectDir)\Device_Startup</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.LibrarySearchPaths>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.linker.memorysettings.ExternalRAM />
+        <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsam3x8e_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+        <armgcccpp.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAM3X_DFP\1.0.41\include</Value>
+            <Value>../src/Config</Value>
+          </ListValues>
+        </armgcccpp.assembler.general.IncludePaths>
+        <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+        <armgcccpp.preprocessingassembler.general.AssemblerFlags>-Dprintf=iprintf</armgcccpp.preprocessingassembler.general.AssemblerFlags>
+        <armgcccpp.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+            <Value>%24(PackRepoDir)\atmel\SAM3X_DFP\1.0.41\include</Value>
+            <Value>../src/Config</Value>
+          </ListValues>
+        </armgcccpp.preprocessingassembler.general.IncludePaths>
+        <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+      </ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Device_Startup\startup_sam3xa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Device_Startup\system_sam3xa.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\dacc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\definitions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\ioController.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\itoa.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\pio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\pmc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\pwmc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\ringbuffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\rng.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\rtc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\rtt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\scheduler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\tc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\timer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\timetick.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\twi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\UART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\USART.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Include\variant.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libraries.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="libraries.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripherals\VCNL4010.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripherals\VCNL4010.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripherals\Sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripherals\LSM9DS0.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Peripherals\LSM9DS0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\dacc.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\definitions.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\ioController.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\pio.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\pmc.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\pwm.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\ringbuffer.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\rng.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\rtc.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\rtt.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\scheduler.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\spi.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\tc.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\timer.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\timetick.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\twi.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\UART.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Source\USART.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix16.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix16.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix16.hpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix16_exp.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix16_sqrt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix16_str.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix16_trig.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix16_trig_sin_lut.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix8.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fix8.hpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fixmath.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fract32.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\fract32.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\int64.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\libfixmath_conf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\uint32.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\FixPointMath\uint32.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\PIDController\pid.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\PIDController\pid.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\Qfplib\qfpio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\Qfplib\qfpio.s">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\Qfplib\qfplib-m3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\Qfplib\qfplib-m3.s">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\Qfplib\qfplib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Tertiary\Qfplib\qfplib.s">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Device_Startup\" />
+    <Folder Include="Include" />
+    <Folder Include="Tertiary" />
+    <Folder Include="Peripherals" />
+    <Folder Include="Source" />
+    <Folder Include="Tertiary\FixPointMath" />
+    <Folder Include="Tertiary\Qfplib" />
+    <Folder Include="Tertiary\PIDController" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Device_Startup\sam3x8e_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\sam3x8e_sram.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\sam3xa_flash.ld">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Device_Startup\sam3xa_sram.ld">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
